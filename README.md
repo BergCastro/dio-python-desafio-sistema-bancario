@@ -44,9 +44,13 @@ O sistema bancário oferece as seguintes funcionalidades:
         git clone https://github.com/BergCastro/dio-python-desafio-sistema-bancario.git
         ```
 3.  **Execução:**
-    *   Execute o script principal:
+    *   Execute o script desafio v1:
         ```bash
         python desafio.py
+        ```
+    *   Execute o script desafio v2
+        ```bash
+        python desafio_v2.py
         ```
 4.  **Utilização:**
     *   Siga as instruções exibidas no menu interativo para realizar as operações desejadas.
