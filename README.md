@@ -1,40 +1,41 @@
-# 🏦 Desafio do Sistema Bancário em Python (Trilha DIO)
+# 🏦 Desafios do Sistema Bancário em Python (Trilha DIO)
 
 <p align="center">
   <img src="https://hermes.digitalinnovation.one/assets/diome/logo-minimized.png" alt="DIO Logo" width="200">
 </p>
 
-## ✨ Sobre o Desafio
+## ✨ Sobre os Desafios
 
-Este projeto representa a conclusão de um dos desafios propostos na Trilha de Python da Digital Innovation One (DIO). O objetivo principal é desenvolver um sistema bancário simplificado, simulando operações essenciais como depósitos, saques e a emissão de extratos. Este desafio visa consolidar os conhecimentos adquiridos sobre a linguagem Python, incluindo:
+Este projeto representa a conclusão de uma série de desafios propostos na Trilha de Python da Digital Innovation One (DIO). O objetivo principal é desenvolver um sistema bancário simplificado, simulando operações essenciais. Cada desafio visa consolidar os conhecimentos adquiridos sobre a linguagem Python, com diferentes níveis de complexidade e abordagens.
+
+Os desafios exploram:
 
 *   **Estruturas de Dados:** Listas, dicionários e tuplas.
 *   **Controle de Fluxo:** Condicionais (`if`, `else`, `elif`) e loops (`for`, `while`).
 *   **Funções:** Definição e utilização para modularização do código.
-*   **Orientação a Objetos (Opcional):** Implementação de classes para representar entidades bancárias.
+*   **Orientação a Objetos (POO):** Implementação de classes para representar entidades bancárias (desafio específico).
 *   **Tratamento de Exceções:** Utilização de `try-except` para lidar com entradas inválidas.
 *   **Boas Práticas de Programação:** Legibilidade, indentação e comentários.
 
-## 🚀 Funcionalidades Implementadas
+## 🎯 Desafios Implementados
 
-O sistema bancário oferece as seguintes funcionalidades:
+Este repositório contém as seguintes versões do desafio do sistema bancário:
 
-*   **Depósito:**
-    *   Permite que o usuário deposite valores positivos em sua conta.
-    *   Registra a data e hora do depósito no extrato.
-    *   Valor mínimo para depósito: R$ 1.00
-*   **Saque:**
-    *   Permite que o usuário realize saques, respeitando as seguintes restrições:
-        *   Limite de saques diários (configurável).
-        *   Valor máximo por saque (configurável).
-        *   Saldo disponível na conta.
-    *   Registra a data e hora do saque no extrato.
-*   **Extrato:**
-    *   Exibe um histórico completo de todas as operações realizadas na conta, incluindo depósitos e saques.
-    *   Mostra o saldo atual da conta.
-    *   Caso não haja movimentações, exibe uma mensagem informativa.
+1.  **Desafio 1: Implementação Simples:**  Uma implementação básica do sistema bancário utilizando funções e estruturas de dados simples. (Arquivo: `desafio.py`)
 
-## ⚙️ Como Executar o Sistema
+2.  **Desafio 2: Implementações de Funções:** Uma versão mais estruturada, com foco na modularização do código através de funções bem definidas. (Arquivo: `desafio_v2.py`)
+
+3.  **Desafio 3: Modelagem POO:** Uma implementação completa utilizando os princípios da Programação Orientada a Objetos, com classes representando contas, clientes, transações, etc. (Pasta: `desafio_poo_v1/`)
+
+## 🚀 Funcionalidades (Comum a Todos os Desafios)
+
+Embora a implementação varie entre os desafios, as funcionalidades principais do sistema bancário são:
+
+*   **Depósito:** Permite depositar valores positivos na conta.
+*   **Saque:** Permite realizar saques, respeitando limites diários, valores máximos e saldo disponível.
+*   **Extrato:** Exibe o histórico de operações (depósitos e saques) e o saldo atual.
+
+## ⚙️ Como Executar os Sistemas
 
 1.  **Pré-requisitos:**
     *   Python 3.6 ou superior instalado em seu sistema.
@@ -44,37 +45,46 @@ O sistema bancário oferece as seguintes funcionalidades:
         git clone https://github.com/BergCastro/dio-python-desafio-sistema-bancario.git
         ```
 3.  **Execução:**
-    *   Execute o script desafio v1:
+
+    *   **Desafio 1 (Implementação Simples):**
         ```bash
         python desafio.py
         ```
-    *   Execute o script desafio v2
+
+    *   **Desafio 2 (Implementações de Funções):**
         ```bash
         python desafio_v2.py
         ```
+
+    *   **Desafio 3 (Modelagem POO):**
+        ```bash
+        cd desafio_poo_v1
+        ```
+
 4.  **Utilização:**
-    *   Siga as instruções exibidas no menu interativo para realizar as operações desejadas.
+    *   Siga as instruções exibidas no menu interativo de cada versão para realizar as operações desejadas.
 
 ## 🏛️ Arquitetura do Projeto
 
-O projeto está estruturado da seguinte forma:
-
-desafio.py # Script principal com a lógica do sistema README.md # Documentação do projeto (este arquivo)
-
-
-O script `desafio.py` contém as seguintes funções principais:
-
-*   `exibir_menu()`: Exibe as opções do menu para o usuário.
-*   `depositar(saldo, extrato)`: Realiza a operação de depósito.
-*   `sacar(saldo, extrato, numero_saques)`: Realiza a operação de saque.
-*   `exibir_extrato(saldo, extrato)`: Exibe o extrato da conta.
-*   `main()`: Função principal que controla o fluxo do programa.
+*   `desafio.py`: Script principal do Desafio 1.
+*   `desafio_v2.py`: Script principal do Desafio 2.
+*   `desafio_poo_v1/`:
+    *   `conta.py`: Classe base para contas bancárias.
+    *   `conta_corrente.py`: Classe para contas correntes (herda de `conta.py`).
+    *   `cliente.py`: Classe para clientes.
+    *   `pessoa_fisica.py`: Classe para pessoas físicas (herda de `cliente.py`).
+    *   `transacao.py`: Classe base para transações.
+    *   `saque.py`: Classe para saques (herda de `transacao.py`).
+    *   `deposito.py`: Classe para depósitos (herda de `transacao.py`).
+    *   `historico.py`: Classe para o histórico de transações.
+    *   ... (outros arquivos relevantes para a implementação POO)
+*   `README.md`: Documentação do projeto (este arquivo).
 
 ## 🛠️ Tecnologias Utilizadas
 
 *   **Linguagem:** Python 3
 *   **Outras Bibliotecas:**
-    *   `datetime`: Utilizada para registrar a data e hora das transações.
+    *   `datetime`: Utilizada para registrar a data e hora das transações (pode ser utilizada em todos os desafios, mas mais relevante no Desafio 1 e 2).
 
 ## ✒️ Contribuições
 
