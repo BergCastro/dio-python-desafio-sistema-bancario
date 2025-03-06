@@ -61,6 +61,12 @@ Embora a implementação varie entre os desafios, as funcionalidades principais 
         cd desafio_poo_v1
         ```
 
+    *   **Desafio 4 (Iteradores e Geradores):**
+        ```bash
+        cd desafio_iteradores_geradores
+        ```
+        
+
 4.  **Utilização:**
     *   Siga as instruções exibidas no menu interativo de cada versão para realizar as operações desejadas.
 
@@ -78,6 +84,8 @@ Embora a implementação varie entre os desafios, as funcionalidades principais 
     *   `deposito.py`: Classe para depósitos (herda de `transacao.py`).
     *   `historico.py`: Classe para o histórico de transações.
     *   ... (outros arquivos relevantes para a implementação POO)
+    `desafio_iteradores_geradores/`:
+    *   `desafio.py`: cript principal do Desafio 4.
 *   `README.md`: Documentação do projeto (este arquivo).
 
 ## 🛠️ Tecnologias Utilizadas
